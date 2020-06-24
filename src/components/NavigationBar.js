@@ -1,9 +1,9 @@
 import React from 'react';
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
+import { Nav, Navbar, Form, FormControl, InputGroup } from 'react-bootstrap';
 import styled from 'styled-components';
 import logo from '../assets/QapaqLogo.png';
 // get our fontawesome imports
-import { faComments, faCartPlus, faClipboard } from "@fortawesome/free-solid-svg-icons";
+import { faComments, faCartPlus, faClipboard, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Styles = styled.div`
@@ -29,7 +29,14 @@ export const NavigationBar = () => (
       <img src={ logo } />
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Form className="form-center">
-        <FormControl type="text" placeholder="Search" className="" />
+      <InputGroup>
+          <InputGroup.Prepend>
+              <InputGroup.Text>
+                  <FontAwesomeIcon icon={faSearch} />
+              </InputGroup.Text>
+          </InputGroup.Prepend>
+          <FormControl type="text" placeholder="Search" className="" />
+      </InputGroup>
       </Form>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
