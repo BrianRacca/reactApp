@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './assets/QapaqLogo.png';
 import { Home } from './Home';
-import { Contact } from './Contact';
-import { Layout } from './components/Layout'
+import { Orders } from './Orders';
+import { ShopList } from './ShopList'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { NavigationBar } from './components/NavigationBar';
@@ -14,6 +13,9 @@ class App extends React.Component {
     <React.Fragment>
       <Router>
         <NavigationBar />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/ordenes' component={Orders} />
+        <Route exact path='/carrito' component={ShopList} />
       </Router>
     </React.Fragment>
   );
