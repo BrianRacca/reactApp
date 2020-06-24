@@ -17,6 +17,11 @@ const Styles = styled.div`
     left: 25%;
     right: 25%;
   }
+
+  .text-rounded {
+    border-radius: 50px;
+  }
+
   .comment-icon {
     margin-left: 22px;
     width: 25px;
@@ -32,10 +37,10 @@ export const NavigationBar = () => (
       <InputGroup>
           <InputGroup.Prepend>
               <InputGroup.Text>
-                  <FontAwesomeIcon icon={faSearch} />
+                  <FontAwesomeIcon icon={faSearch} className="text-rounded" />
               </InputGroup.Text>
           </InputGroup.Prepend>
-          <FormControl type="text" placeholder="Search" className="" />
+          <FormControl type="text" placeholder="Search" className="text-rounded" />
       </InputGroup>
       </Form>
       <Navbar.Collapse id="basic-navbar-nav">
