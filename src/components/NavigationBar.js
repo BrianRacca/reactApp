@@ -21,7 +21,6 @@ const Styles = styled.div`
     margin-left: 22px;
     width: 25px;
     height: 25px;
-    display: flex;
   }
 `;
 export const NavigationBar = () => (
